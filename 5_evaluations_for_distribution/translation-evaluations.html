@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Evaluations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Translation Evaluations</h1>
+    </header>
+
+    <!-- Translator Selection Section -->
+    <div class="section translator-selection">
+        <div class="translator-info">
+            <h3>Translator: <span id="translator-name">Loading...</span></h3>
+            <div class="translation-selector">
+                <label for="translation-dropdown">Select Translation:</label>
+                <select id="translation-dropdown" disabled>
+                    <option value="">Loading translations...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <h3>Loading evaluation data...</h3>
+    </div>
+
+    <div id="content" style="display: none;">
+        <!-- Evaluated Text Section -->
+        <div class="section">
+            <h2>Evaluation</h2>
+            
+            <!-- Legend -->
+            <div class="legend" id="legend">
+                <h3>Legend</h3> <!-- I would like the subheader of "Legend" to appear here -->
+                <!-- Legend items will be populated by JavaScript -->
+            </div>
+
+            <!-- Display Notes -->
+            <div class="notes-container" id="notes-container" style="background-color:#fff8e1; border-left:4px solid #f0c040; padding:12px 18px; border-radius:6px; margin-bottom:18px;">
+                <h3 style="margin:0 0 6px 0; color:#7d5c00;">📋 Display Note</h3>
+                <p style="margin:0; color:#5a4000;">If the formatting of this translation is not displaying correctly, that is because the original Markdown formatting was not preserved during translation. To ensure the formatting displays correctly, the Markdown syntax from the source text must be maintained in the translation.</p>
+            </div>
+
+            <!-- Text with highlights -->
+            <div class="text-content" id="annotated-text">
+                <!-- Annotated text will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Table View Section -->
+        <div class="section">
+            <h2>Table View</h2>
+            
+            <!-- Summary table -->
+            <table class="summary-table" id="issues-table">
+                <thead>
+                    <tr>
+                        <th>Text Segment</th>
+                        <th>Dimension</th>
+                        <th>Type</th>
+                        <th>Impact</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody id="issues-tbody">
+                    <!-- Table rows will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Overall Assessment Section -->
+        <div class="section">
+            <h2>Overall Assessment</h2>
+            
+            <div class="scores-container">
+                <div class="score-card">
+                    <div class="score-label">Overall Correspondence</div>
+                    <div class="score-value" id="correspondence-score">-</div>
+                    <div>out of 4</div>
+                    <div class="score-comment" id="correspondence-comment"></div>
+                </div>
+                
+                <div class="score-card">
+                    <div class="score-label">Overall Readability</div>
+                    <div class="score-value" id="readability-score">-</div>
+                    <div>out of 4</div>
+                    <div class="score-comment" id="readability-comment"></div>
+                </div>
+            </div>
+
+            <div class="document-comments" id="document-issues">
+                <h3>Document-Level Comments</h3>
+                <div id="document-comments-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <div class="section">
+        <h2>Interpreting Your Translation Results</h2>
+        
+        <div class="info-content">
+            <p>After marking individual errors and understanding the nature of the errors reflected in the translation, the text will receive ratings for overall correspondence and readability, where:</p>
+            
+            <ul>
+                <li><strong>For correspondence:</strong> 1 means significant differences in meaning and 4 means excellent correspondence in meaning, and</li>
+                <li><strong>For readability:</strong> 1 means difficult to read and 4 means natural to read,</li>
+            </ul>
+            
+            <p>Both given such specifications as audience and purpose.</p>
+            
+            <p>These ratings are mapped onto overall effectiveness ratings.</p>
+            
+            <table class="effectiveness-table">
+                <thead>
+                    <tr>
+                        <th>Effectiveness</th>
+                        <th>Correspondence</th>
+                        <th>Readability</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="effective">
+                        <td><strong>Effective</strong></td>
+                        <td>4</td>
+                        <td>3-4</td>
+                        <td>The translation fully facilitates the specific audience's understanding and allows the text to be appropriately used.</td>
+                    </tr>
+                    <tr class="mostly-effective">
+                        <td><strong>Mostly effective</strong></td>
+                        <td>3</td>
+                        <td>2-3</td>
+                        <td>The translation mostly facilitates the specific audience's overall understanding. It has minor errors that do not impede the text from being used.</td>
+                    </tr>
+                    <tr class="somewhat-ineffective">
+                        <td><strong>Somewhat ineffective</strong></td>
+                        <td>2</td>
+                        <td>2-3</td>
+                        <td>Parts of the translation impede understanding and the overall use of the content.</td>
+                    </tr>
+                    <tr class="entirely-ineffective">
+                        <td><strong>Entirely ineffective</strong></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>The translation can't be understood or is significantly incomplete.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tooltip element -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <footer id="footer">
+        <span id="footer-text">Loading...</span>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

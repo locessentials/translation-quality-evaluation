@@ -1,0 +1,555 @@
+{
+  "annotation_data": {
+    "created_at": "2026-03-19T20:34:43.914560Z",
+    "lead_time": 484.992,
+    "result": [
+      {
+        "from_name": "label",
+        "id": "gEGb6yDx2e",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 15,
+          "labels": [
+            "Terminology"
+          ],
+          "start": 0,
+          "text": "Quality reviews"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "gEGb6yDx2e",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "TERM: Correctness"
+          ],
+          "end": 15,
+          "start": 0,
+          "text": "Quality reviews"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "gEGb6yDx2e",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Neutral"
+          ],
+          "end": 15,
+          "start": 0,
+          "text": "Quality reviews"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "gEGb6yDx2e",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 15,
+          "start": 0,
+          "text": [
+            "Consider distinguishing the ideas of \"quality reviews\" from \"quality evaluations\""
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "fGJNea7Pf2",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 300,
+          "labels": [
+            "Style"
+          ],
+          "start": 0,
+          "text": "Quality reviews are scheduled after common production tasks within translation and localization workflows as a check to ensure that the developing product meets the minimum quality standards for that stage, and to prevent unnecessary downstream issues and losses related to rework becoming necessary."
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "fGJNea7Pf2",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "STYLE: Naturalness"
+          ],
+          "end": 300,
+          "start": 0,
+          "text": "Quality reviews are scheduled after common production tasks within translation and localization workflows as a check to ensure that the developing product meets the minimum quality standards for that stage, and to prevent unnecessary downstream issues and losses related to rework becoming necessary."
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "fGJNea7Pf2",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Moderate"
+          ],
+          "end": 300,
+          "start": 0,
+          "text": "Quality reviews are scheduled after common production tasks within translation and localization workflows as a check to ensure that the developing product meets the minimum quality standards for that stage, and to prevent unnecessary downstream issues and losses related to rework becoming necessary."
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "fGJNea7Pf2",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 300,
+          "start": 0,
+          "text": [
+            "This is a very long sentence that is likely to lose the reader."
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "tlGA5-8row",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 632,
+          "labels": [
+            "Style"
+          ],
+          "start": 301,
+          "text": "The issues and expectations-exceeding performance that quality reviewers flag help quality managers understand where to encourage good performance and where to focus root-cause analysis to prevent issues, and root-cause analyses help project managers optimize processes and resources to build high performing productions over time."
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "tlGA5-8row",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "STYLE: Naturalness"
+          ],
+          "end": 632,
+          "start": 301,
+          "text": "The issues and expectations-exceeding performance that quality reviewers flag help quality managers understand where to encourage good performance and where to focus root-cause analysis to prevent issues, and root-cause analyses help project managers optimize processes and resources to build high performing productions over time."
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "tlGA5-8row",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Moderate"
+          ],
+          "end": 632,
+          "start": 301,
+          "text": "The issues and expectations-exceeding performance that quality reviewers flag help quality managers understand where to encourage good performance and where to focus root-cause analysis to prevent issues, and root-cause analyses help project managers optimize processes and resources to build high performing productions over time."
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "tlGA5-8row",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 632,
+          "start": 301,
+          "text": [
+            "Same issue - unnecessarily long sentence"
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "A5Yd77g6Gf",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 670,
+          "labels": [
+            "Style"
+          ],
+          "start": 656,
+          "text": "Primary Duties"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "A5Yd77g6Gf",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "STYLE: Naturalness"
+          ],
+          "end": 670,
+          "start": 656,
+          "text": "Primary Duties"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "A5Yd77g6Gf",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Moderate"
+          ],
+          "end": 670,
+          "start": 656,
+          "text": "Primary Duties"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "A5Yd77g6Gf",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 670,
+          "start": 656,
+          "text": [
+            "Update to: Primary Responsibilities"
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "8ruXZgu3WB",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 732,
+          "labels": [
+            "Accuracy"
+          ],
+          "start": 724,
+          "text": "accuracy"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "8ruXZgu3WB",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "ACC: Completeness"
+          ],
+          "end": 732,
+          "start": 724,
+          "text": "accuracy"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "8ruXZgu3WB",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Strong"
+          ],
+          "end": 732,
+          "start": 724,
+          "text": "accuracy"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "8ruXZgu3WB",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 732,
+          "start": 724,
+          "text": [
+            "Here, it would be useful to add discussion about why this idea of 100% accuracy in translation is not possible, though using specifications makes accuracy more definable."
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "yOauAiFSEg",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 763,
+          "labels": [
+            "Accuracy"
+          ],
+          "start": 751,
+          "text": "completeness"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "yOauAiFSEg",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "ACC: Completeness"
+          ],
+          "end": 763,
+          "start": 751,
+          "text": "completeness"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "yOauAiFSEg",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Strong"
+          ],
+          "end": 763,
+          "start": 751,
+          "text": "completeness"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "yOauAiFSEg",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 763,
+          "start": 751,
+          "text": [
+            "Same issue. The idea of \"completeness\" in translation is a tricky one. In translation, meaning loss from the source and additions in the target are part and parcel of translation. Reviewers need guidelines for what completeness actually means, i.e. that it's a matter of prioritization."
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "xy4n6PvBkw",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 817,
+          "labels": [
+            "Style"
+          ],
+          "start": 811,
+          "text": "proper"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "xy4n6PvBkw",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "STYLE: Register"
+          ],
+          "end": 817,
+          "start": 811,
+          "text": "proper"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "xy4n6PvBkw",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Moderate"
+          ],
+          "end": 817,
+          "start": 811,
+          "text": "proper"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "xy4n6PvBkw",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 817,
+          "start": 811,
+          "text": [
+            "This is a bit high-brow. Consider replacing with appropriate"
+          ]
+        }
+      },
+      {
+        "from_name": "label",
+        "id": "s2FBVyyqHq",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "labels",
+        "value": {
+          "end": 862,
+          "labels": [
+            "Linguistic Conventions"
+          ],
+          "start": 851,
+          "text": "conventions"
+        }
+      },
+      {
+        "from_name": "subcategories",
+        "id": "s2FBVyyqHq",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "LING: Punctuation"
+          ],
+          "end": 862,
+          "start": 851,
+          "text": "conventions"
+        }
+      },
+      {
+        "from_name": "impact",
+        "id": "s2FBVyyqHq",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "choices",
+        "value": {
+          "choices": [
+            "Moderate"
+          ],
+          "end": 862,
+          "start": 851,
+          "text": "conventions"
+        }
+      },
+      {
+        "from_name": "comments",
+        "id": "s2FBVyyqHq",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "end": 862,
+          "start": 851,
+          "text": [
+            "End a sentence with a period"
+          ]
+        }
+      },
+      {
+        "from_name": "document_issues",
+        "id": "32nAZWR1DX",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "text": [
+            "Many concepts from translation theory need to be defined here for reviewers to be successful."
+          ]
+        }
+      },
+      {
+        "from_name": "overall_correspondence",
+        "id": "K5bBjEHMSj",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "rating",
+        "value": {
+          "rating": 3
+        }
+      },
+      {
+        "from_name": "correspondence_comments",
+        "id": "k_aPWATtIe",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "text": [
+            "Correspondence could be improved by providing a glossary of key concepts along with training materials like this one."
+          ]
+        }
+      },
+      {
+        "from_name": "overall_readability",
+        "id": "Dvg13LKDz1",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "rating",
+        "value": {
+          "rating": 3
+        }
+      },
+      {
+        "from_name": "readability_comments",
+        "id": "oijePGIz3t",
+        "origin": "manual",
+        "to_name": "text",
+        "type": "textarea",
+        "value": {
+          "text": [
+            "Long sentences and the overly high register make this content less approachable."
+          ]
+        }
+      }
+    ],
+    "result_count": 13,
+    "task_id": 26,
+    "updated_at": "2026-03-19T20:36:21.612787Z"
+  },
+  "base_name": "intro-to-quality-reviews-sample",
+  "created_at": "2026-03-19T20:28:12.306226Z",
+  "data": {
+    "text": "Quality reviews are scheduled after common production tasks within translation and localization workflows as a check to ensure that the developing product meets the minimum quality standards for that stage, and to prevent unnecessary downstream issues and losses related to rework becoming necessary. The issues and expectations-exceeding performance that quality reviewers flag help quality managers understand where to encourage good performance and where to focus root-cause analysis to prevent issues, and root-cause analyses help project managers optimize processes and resources to build high performing productions over time.\n\n## Quality Reviewer - Primary Duties\n\n- **Review translated technical documentation** for accuracy, consistency, and completeness, including correct measurement conversions and proper application of language-specific conventions\n\n---\n\n*Source: Adapted from Iverson Language Associates Quality Reviewer Training Materials*"
+  },
+  "file_name": "intro-to-quality-reviews-sample.md",
+  "meta_info": {
+    "converter": "md_to_json_converter",
+    "created_date": "2025-10-02T14:44:00.672334",
+    "source_file": "intro-to-quality-reviews-sample.md",
+    "text_name": "intro-to-quality-reviews-sample",
+    "type": "text_for_annotation"
+  },
+  "source_text": "Quality reviews are scheduled after common production tasks within translation and localization workflows as a check to ensure that the developing product meets the minimum quality standards for that stage, and to prevent unnecessary downstream issues and losses related to rework becoming necessary. The issues and expectations-exceeding performance that quality reviewers flag help quality managers understand where to encourage good performance and where to focus root-cause analysis to prevent issues, and root-cause analyses help project managers optimize processes and resources to build high performing productions over time.\n\n## Quality Reviewer - Primary Duties\n\n- **Review translated technical documentation** for accuracy, consistency, and completeness, including correct measurement conversions and proper application of language-specific conventions\n\n---\n\n*Source: Adapted from Iverson Language Associates Quality Reviewer Training Materials*",
+  "task_id": 26,
+  "updated_at": "2026-03-19T20:36:21.809172Z"
+}
