@@ -129,7 +129,8 @@ translation-evaluations/
 ├── 6_annotator_agreement
 │   ├── data                # Label Studio Output (from 4) where multiple evaluators have evaluated the same doc goes here
 │   ├── reports             # Jupyter notebook exports an .html report of inter-annotator agreement here
-│   └── Translation_Annotator_Agreement.py        # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
+│   │   └── QUALITY REVIEWS_report_2026-03-19.html    # Example inter-annotator agreement report
+│   └── Translation_Annotator_Agreement.ipynb         # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
 ```
 
 ### 1_source_text_md_format
