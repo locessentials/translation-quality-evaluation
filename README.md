@@ -110,22 +110,26 @@ translation-evaluations/
 ├── README.md       # This file
 ├── LICENSE         # GNU GPL-2.0
 ├── 1_source_text_md_format
-│   └── texto1-inmigracion.md               # Example of a source text in .md format
+│   └── intro-to-quality-reviews-sample.md          # Example of a source text in .md format
 ├── 2_md_to_json_conversion
-│   └── md_to_json_converter.py     # Script to convert .md to Label Studio compatible .json
+│   └── md_to_json_converter.py                     # Script to convert translated.md to Label Studio compatible .json
 ├── 3_label_studio_input
+│   ├── intro-to-quality-reviews-sample.json        # Example of a .md converted for import into Label Studio
 │   └── MQM-Translation-Errors_Core-Adapted.txt     # Label Studio labeling interface code
 ├── 4_label_studio_ouput
-│   └── parse_evaluations.py        # Script to make Label Studio .json pretty
+│   ├── intro-to-quality-reviews-sample-markup.json # Example Label Studio output of a project with multiple evaluators of the same doc
+│   └── parse_evaluations.py        # Script to make Label Studio outpt.json pretty for incorporation into translation-evaluations.html in the next step
 ├── 5_evaluation_for_distribution
 │   ├── config.json                 # Where meta-data for .html page are configured
 │   ├── scripts.js                  # Scripts to dynamically display annotations on webpage
 │   ├── styles.css                  # Webpage styles
-│   ├── texto1-inmigracion-evaluation.json          # Example of Label Studio annotations
-│   ├── translation-evaluations.html                # Webpage that displays results
-│   └── TranslationEvaluations-HowToDisplayYourFeedback.pdf     # Instructions
+│   ├── intro-to-quality-reviews-sample-evaluation.json         # Example of Label Studio annotations made pretty for incorporation into .html
+│   ├── translation-evaluations.html                            # Webpage that displays results
+│   └── TranslationEvaluations-HowToDisplayYourFeedback.pdf     # Instructions on how to display .html via VSC
 ├── 6_annotator_agreement
-│   └── Translation_Annotator_Agreement.py        # Script to make Label Studio .json pretty
+│   ├── data                # Label Studio Output (from 4) where multiple evaluators have evaluated the same doc goes here
+│   ├── reports             # Jupyter notebook exports an .html report of inter-annotator agreement here
+│   └── Translation_Annotator_Agreement.py        # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
 ```
 
 ### 1_source_text_md_format
@@ -171,11 +175,11 @@ Of all of the files provided, only the config.json page needs to be configured t
 {
   "translator": "Translator's Name",
   "evaluator": "Alaina Brandt",
-  "identifier": "TR14",
-  "period": "2026-1",
-  "organization": "UIC",
+  "identifier": "QC",
+  "period": "2026",
+  "organization": "LocEssentials",
   "evaluation_files": {
-    "texto1-evaluation.json": "INM Work Permit"
+    "intro-to-quality-reviews-sample-evaluation.json": "Quality Reviews"
   }
 }
 ```
@@ -191,8 +195,6 @@ Then, the annotations are presented in a table view.
 At the bottom of the page overall correspondence and readability scores are displayed, along with comments on document-level issues.
 
 The page ends with a section on **Interpreting Your Translation Results**, which tells people how to determine the overall effectiveness of the translation, given the correspondence and readability scores.
-
-Example webpage with example source text analysis following MQM: [https://alainamb.github.io/translation-quality-mgmt/5_evaluations_for_distribution/translation-evaluations.html](https://alainamb.github.io/translation-quality-mgmt/5_evaluations_for_distribution/translation-evaluations.html)
 
 #### How to...
 
