@@ -205,7 +205,9 @@ Example webpage with example source text analysis following MQM: [https://alaina
 
 Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studies by running the `Translation_Annotator_Agreement.ipynb`.
 
-Findings related to annotator agreement, such as exact matching, F1 for partial matching, and Kappa for category agreement scores, can be used as an aid in helping a group of evaluators to harmonize their ideas and produce consistent work that will not confuse translators.
+Findings related to annotator agreement, such as exact matching, F1 for partial matching, and Cohen's Kappa for category agreement scores, can be used as an aid in helping a group of evaluators to harmonize their ideas and produce consistent work that will not confuse translators.
+
+Note: To run the notebook, copy the 4_label_studio_output file to a `./data` folder in the 6_annotator_agreement folder. Cell 9 starting with `annotation_files` prints the Task #. Update the `doc_id=26` replacing 26 with your task number throughout the file to get document specific analysis (useful if your Label Studio project had multiple annotated files).
 
 ## References
 
