@@ -6,12 +6,12 @@ let availableFiles = [];
 
 // Color mapping for error categories (matching CSS highlight colors)
 const categoryColors = {
-    'terminology': '#6CD97E',
+    'terminology': '#1f6944',
     'accuracy': '#FF4A4A',
-    'style': '#D89EFF', 
-    'locale conventions': '#FFAF4F',
-    'audience appropriateness': '#FFC0CB',
-    'linguistic conventions': '#5AA3E8'
+    'style': '#ef91c6', 
+    'linguistic conventions': '#50A5E6',
+    'locale conventions': '#ffbc00',
+    'audience appropriateness': '#691f44',
 };
 
 // Initialize the page
@@ -356,18 +356,18 @@ function displayAnnotatedText() {
             const segment = translatedText.substring(lastPos, boundary.pos);
             
             if (activeAnnotations.length > 0) {
-                // This segment is highlighted - use the first (innermost) annotation
-                const primaryAnnotation = activeAnnotations[0];
-                const category = getCategoryFromLabel(primaryAnnotation.annotation);
-                const impact = getImpact(primaryAnnotation.annotation);
-                const isQM = isQualityMarker(primaryAnnotation.annotation);
-                const qmClass = isQM ? " quality-marker" : "";
-                const cssClasses = `highlight ${category.replace(/\s+/g, "-")} impact-${impact}${qmClass}`;
-                
-                processedText += `<span class="${cssClasses}" data-annotation-index="${primaryAnnotation.index}">${segment}</span>`;
-                
-                // Store annotation for tooltip
-                annotationMap.set(primaryAnnotation.index, primaryAnnotation.annotation);
+                // Build nested spans for overlapping annotations, outermost first
+                let segmentHtml = segment;
+                [...activeAnnotations].reverse().forEach(activeAnn => {
+                    const category = getCategoryFromLabel(activeAnn.annotation);
+                    const impact = getImpact(activeAnn.annotation);
+                    const isQM = isQualityMarker(activeAnn.annotation);
+                    const qmClass = isQM ? " quality-marker" : "";
+                    const cssClasses = `highlight ${category.replace(/\s+/g, "-")} impact-${impact}${qmClass}`;
+                    segmentHtml = `<span class="${cssClasses}" data-annotation-index="${activeAnn.index}">${segmentHtml}</span>`;
+                    annotationMap.set(activeAnn.index, activeAnn.annotation);
+                });
+                processedText += segmentHtml;
             } else {
                 // No highlighting - add segment as-is (don't escape yet)
                 processedText += segment;
@@ -520,12 +520,14 @@ function displaySummaryTable() {
         const impactClass = isQM ? `impact-qm-${impact}` : `impact-${impact}`;
         const impactBadge = `<span class="impact-badge ${impactClass}">${impact.charAt(0).toUpperCase() + impact.slice(1)}</span>`;
         const dimDisplay = category.charAt(0).toUpperCase() + category.slice(1);
+        const dimClass = category.replace(/\s+/g, '-');
+        const dimBadge = `<span class="dimension-badge ${dimClass}">${dimDisplay}</span>`;
         const qmNote = isQM ? ' <span class="qm-badge">★</span>' : '';
-        
+
         tableHtml += `
             <tr>
                 <td class="text-segment">${escapeHtml(text)}</td>
-                <td>${dimDisplay}${qmNote}</td>
+                <td>${dimBadge}${qmNote}</td>
                 <td>${escapeHtml(subcategory)}</td>
                 <td>${impactBadge}</td>
                 <td class="comments-cell">${escapeHtml(comments)}</td>

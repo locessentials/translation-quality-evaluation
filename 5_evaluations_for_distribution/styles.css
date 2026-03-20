@@ -94,7 +94,6 @@ h1 {
 
 /* ── Translator Selection ──────────────────────────────────── */
 .translator-selection {
-  border-left: 4px solid var(--blue-mid);
   padding: 20px 28px;
 }
 
@@ -250,6 +249,12 @@ h1 {
   font-size: 1em;
   line-height: 1.85;
   color: var(--text-primary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
 }
 
 .text-content h1 {
@@ -334,7 +339,9 @@ h1 {
   position: relative;
   cursor: default;
   padding: 2px 5px;
-  border-radius: 4px;
+  border-radius: 0;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -344,21 +351,13 @@ h1 {
   z-index: 10;
 }
 
-.highlight.terminology            { background-color: #6CD97E; color: #fff; }
-.highlight.accuracy               { background-color: #FF4A4A; color: #fff; }
-.highlight.style                  { background-color: #D89EFF; color: #fff; }
-.highlight.linguistic-conventions { background-color: var(--blue-light); color: #fff; }
-.highlight.locale-conventions     { background-color: var(--yellow); color: #333; }
-.highlight.audience-appropriateness { background-color: var(--pink); color: #fff; }
-
-.highlight.linguistic,
-.highlight[class*="linguistic"]   { background-color: var(--blue-light); color: #fff; }
-.highlight.locale,
-.highlight[class*="locale"]       { background-color: var(--yellow); color: #333; }
-.highlight.audience,
-.highlight[class*="audience"]     { background-color: var(--pink); color: #fff; }
-
-.highlight.quality-marker         { background-color: var(--green-dark) !important; color: #fff !important; }
+.highlight.terminology             { background-color: #1f6944; color: #fff; }
+.highlight.accuracy                { background-color: #FF4A4A; color: #fff; }
+.highlight.style                   { background-color: #ef91c6; color: #fff; }
+.highlight.linguistic-conventions  { background-color: #50A5E6; color: #fff; }
+.highlight.locale-conventions      { background-color: #ffbc00; color: #333; }
+.highlight.audience-appropriateness{ background-color: #691f44; color: #fff; }
+.highlight.quality-marker          { background-color: #60ff6c !important; color: #333 !important; }
 
 /* ── Tooltip ───────────────────────────────────────────────── */
 .tooltip {
@@ -376,7 +375,6 @@ h1 {
   box-shadow: var(--shadow-lg);
   line-height: 1.45;
   pointer-events: none;
-  border-top: 3px solid var(--pink);
 }
 
 .tooltip.show {
@@ -431,7 +429,7 @@ h1 {
 }
 
 .summary-table th {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+  background: var(--blue-dark);
   color: var(--white);
   font-weight: 600;
   font-size: 0.82em;
@@ -442,7 +440,7 @@ h1 {
 }
 
 .summary-table tr:nth-child(even) { background-color: #f7f9fc; }
-.summary-table tr:hover           { background-color: #eef4fb; }
+.summary-table tbody tr:hover           { background-color: #eef4fb; }
 
 .summary-table td:last-child { border-right: none; }
 
@@ -482,10 +480,21 @@ h1 {
 .impact-strong      { background-color: #e0621a; color: #fff; }
 .impact-showstopper { background-color: #c0392b; color: #fff; }
 
-.impact-qm-neutral     { background-color: #c3e6cb; color: #1f6944; }
-.impact-qm-moderate    { background-color: #2ecc71; color: #fff; }
-.impact-qm-strong      { background-color: var(--green-dark); color: #fff; }
-.impact-qm-showstopper { background-color: #145232; color: #fff; }
+.dimension-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #fff;
+}
+ 
+.dimension-badge.terminology              { background-color: #1f6944; }
+.dimension-badge.accuracy                 { background-color: #FF4A4A; }
+.dimension-badge.style                    { background-color: #ef91c6; color: #333; }
+.dimension-badge.linguistic-conventions   { background-color: #50A5E6; }
+.dimension-badge.locale-conventions       { background-color: #ffbc00; color: #333; }
+.dimension-badge.audience-appropriateness { background-color: #691f44; }
 
 .qm-badge {
   color: var(--yellow);
@@ -507,7 +516,6 @@ h1 {
   border-radius: var(--radius);
   text-align: center;
   border: 1px solid var(--border);
-  border-bottom: 4px solid var(--blue-mid);
   transition: box-shadow 0.2s;
 }
 
@@ -545,9 +553,13 @@ h1 {
 .document-comments {
   background-color: var(--alabaster);
   padding: 22px 26px;
+  margin-bottom: 20px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  border-bottom: 4px solid var(--pink);
+}
+
+.document-comments:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .document-comments h3 {
@@ -584,14 +596,14 @@ h1 {
  
 .effectiveness-table th,
 .effectiveness-table td {
-  padding: 13px 16px;
+  padding: 13px 14px;
   text-align: left;
   border: 1px solid var(--border);
   vertical-align: top;
 }
  
 .effectiveness-table th {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+  background: var(--blue-dark);
   color: var(--white);
   font-weight: 600;
   font-size: 0.82em;
@@ -600,12 +612,12 @@ h1 {
   text-align: center;
 }
  
-.effectiveness-table td:first-child { font-family: Arial, sans-serif; font-weight: 700; text-align: center; }
+.effectiveness-table td:first-child { font-weight: 400; text-align: center; }
 .effectiveness-table td:nth-child(2),
 .effectiveness-table td:nth-child(3) { text-align: center; font-weight: 400; color: var(--blue-mid); }
  
 .effectiveness-table tr:nth-child(even) { background-color: #f7f9fc; }
-.effectiveness-table tr:hover { opacity: 0.88; }
+.effectiveness-table tbody tr:hover { background-color: #eef4fb; }
 
 /* ── Loading / Error ───────────────────────────────────────── */
 .loading {

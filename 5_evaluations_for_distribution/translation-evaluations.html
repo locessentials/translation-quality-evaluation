@@ -36,20 +36,21 @@
             <!-- Legend -->
             <h3>Legend</h3>
             <div class="legend" id="legend">
-                
                 <!-- Legend items will be populated by JavaScript -->
             </div>
 
-            <!-- Display Notes -->
-            <div class="notes-container" id="notes-container" style="background-color:#fff8e1; border-left:4px solid #f0c040; padding:12px 18px; border-radius:6px; margin-bottom:18px;">
-                <h3 style="margin:0 0 6px 0; color:#7d5c00;">📋 Display Note</h3>
-                <p style="margin:0; color:#5a4000;">If the formatting of this translation is not displaying correctly, that is because the original Markdown formatting was not preserved during translation. To ensure the formatting displays correctly, the Markdown syntax from the source text must be maintained in the translation.</p>
-            </div>
+
 
             <!-- Text with highlights -->
             <h3>Annotated Text</h3>
             <div class="text-content" id="annotated-text">
                 <!-- Annotated text will be populated by JavaScript -->
+            </div>
+
+            <!-- Display Notes -->
+            <div class="notes-container" id="notes-container" style="background-color:#fff8e1; border-left:4px solid #f0c040; padding:12px 18px; border-radius:6px; margin-bottom:18px;">
+                <h3 style="margin:0 0 6px 0; color:#7d5c00;">📋 Display Note</h3>
+                <p style="margin:0; color:#5a4000;">If the formatting of this translation is not displaying correctly, it may be because the original Markdown formatting was not preserved during translation. Alternatively spans that overlap with Markdown syntax may cause display issues as well. To ensure the formatting displays correctly, the Markdown syntax from the source text must be maintained in the translation, and no annotations can overlap with the Markdown syntax.</p>
             </div>
         </div>
 
@@ -78,6 +79,11 @@
         <div class="section">
             <h2>Overall Assessment</h2>
             
+            <div class="document-comments" id="document-issues">
+                <h3>Document-Level Comments</h3>
+                <div id="document-comments-content"></div>
+            </div>
+
             <div class="scores-container">
                 <div class="score-card">
                     <div class="score-label">Overall Correspondence</div>
@@ -92,11 +98,6 @@
                     <div>out of 4</div>
                     <div class="score-comment" id="readability-comment"></div>
                 </div>
-            </div>
-
-            <div class="document-comments" id="document-issues">
-                <h3>Document-Level Comments</h3>
-                <div id="document-comments-content"></div>
             </div>
         </div>
     </div>
