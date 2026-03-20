@@ -92,6 +92,15 @@ h1 {
   margin-bottom: 22px;
 }
 
+.section h3 {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin: 0 0 14px 0;
+}
+
 /* ── Translator Selection ──────────────────────────────────── */
 .translator-selection {
   padding: 20px 28px;
@@ -220,28 +229,28 @@ h1 {
 
 /* ── Display Note ──────────────────────────────────────────── */
 .notes-container {
-  background-color: #fffbf0 !important;
-  border-left: 4px solid var(--yellow) !important;
-  padding: 14px 20px !important;
-  border-radius: 8px !important;
-  margin-bottom: 20px !important;
+  background-color: #fff8e1;
+  border-left: 4px solid #f0c040;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .notes-container h3 {
-  margin: 0 0 6px 0 !important;
-  font-family: var(--font-body) !important;
-  font-size: 0.88em !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  color: #7a5200 !important;
+  margin: 0 0 6px 0;
+  font-family: var(--font-body);
+  font-size: 0.88em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7d5c00;
 }
 
 .notes-container p {
-  margin: 0 !important;
-  font-size: 0.9em !important;
-  color: #5a3e00 !important;
-  line-height: 1.6 !important;
+  margin: 0;
+  font-size: 0.9em;
+  color: #5a4000;
+  line-height: 1.6;
 }
 
 /* ── Text Content (annotated translation) ──────────────────── */
@@ -620,6 +629,10 @@ h1 {
 .effectiveness-table tbody tr:hover { background-color: #eef4fb; }
 
 /* ── Loading / Error ───────────────────────────────────────── */
+#content {
+  display: none;
+}
+
 .loading {
   text-align: center;
   padding: 48px;
