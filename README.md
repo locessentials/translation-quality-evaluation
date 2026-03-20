@@ -157,7 +157,7 @@ The files in this folder are used in the Label Studio projects that are annotate
 1. Create your Label Studio project
 2. Import the generated JSON files from the previous step into Label Studio
 3. Copy the contents of the `MQM-Translation-Errors_Core-Adapted.txt` file into the Labeling Interface (or create your own labeling interface) in Label Studio
-4. Do the annotation
+4. Do the annotation being careful not to highlight any of the markdown formatting symbols. Doing so will prevent the text and annotations from appearing correctly in the distributed evaluation (step 5).
 5. Export the annotations from a Label Studio project to the `4_label_studio_ouput` folder
 
 ### 4_label_studio_ouput
@@ -187,7 +187,7 @@ Of all of the files provided, only the config.json page needs to be configured t
 
 #### Translation Evaluations and Example Text Analysis
 
-The [translation-evaluations.html](https://alainamb.github.io/translation-quality-mgmt/5_evaluations_for_distribution/translation-evaluations.html) page displays annotation data dynamically on the page. Via the dropdown menu, the annotation that one would like to view can be selected. The annotation that is available to view at the link is a markup of the example source text shared in `1_source_text_md_format/`. It is a markup of the areas of the source text, that if translated incorrectly, would result in errors in the translation.
+The [translation-evaluations.html](https://locessentials.github.io/translation-quality-evaluation/5_evaluations_for_distribution/translation-evaluations.html) page displays annotation data dynamically on the page. Via the dropdown menu, the annotation that one would like to view can be selected. The annotation that is available to view at the link is a markup of the example source text shared in `1_source_text_md_format/`.
 
 The evaluation is presented in full text format, with highlights over the spans that have been annotated. The highlights have a hover dialogue box associated with them, that indicates the error dimension and type, the severity level, and the comments association with the annotation.
 
@@ -206,7 +206,7 @@ The page ends with a section on **Interpreting Your Translation Results**, which
 
 ### 6_annotator_agreement
 
-Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studies by running the `Translation_Annotator_Agreement.ipynb`.
+Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studies by running the `Translation_Annotator_Agreement.ipynb`. The Jupyter notebook exports a report with findings related to annotator agreement in html format, like [this one](https://locessentials.github.io/translation-quality-evaluation/6_annotator_agreement/reports/QUALITY%20REVIEWS_report_2026-03-19.html).
 
 Findings related to annotator agreement, such as exact matching, F1 for partial matching, and Cohen's Kappa for category agreement scores, can be used as an aid in helping a group of evaluators to harmonize their ideas and produce consistent work that will not confuse translators.
 
@@ -214,6 +214,7 @@ Note: To run the notebook, copy the 4_label_studio_output file to a `./data` fol
 
 ## References
 
+- [Loc401: Translation Quality Management Systems Based on MQM](https://loc401.locessentials.com/#content/eng-usa/introduction.md) is a companion open-source course to this repo.
 - [The MQM Core Typology](https://themqm.org/the-mqm-typology/)
 - ASTM F2575-23e2, Standard Practice for Language Translation
 - ASTM WK46396, Practice for Analytic Evaluation of Translation Quality (draft standard)
