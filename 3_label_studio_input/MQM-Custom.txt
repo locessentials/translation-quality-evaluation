@@ -33,6 +33,8 @@
             <Choice value="TERM: Consistency" hotkey="8" />
             <Choice value="ACC: Translatability" hotkey="9" />
             <Choice value="ACC: Completeness" hotkey="0" />
+            <Choice value="ACC: Cohesion" hotkey="o" />
+            <Choice value="ACC: Coherence" hotkey="y" />
             <Choice value="ACC: Mistranslation" hotkey="m" />
             <Choice value="STYLE: Naturalness" hotkey="n" />
             <Choice value="STYLE: Consistency" hotkey="c" />
@@ -45,7 +47,7 @@
             <Choice value="LING: Punctuation" hotkey="p" />
             <Choice value="LOC: Number" hotkey="N" />
             <Choice value="AUD: Culture-specific" hotkey="C" />
-            <Choice value="AUD: Offensive" hotkey="o" />
+            <Choice value="AUD: Offensive" hotkey="x" />
             <Choice value="Quality Marker" hotkey="q" />
         </Choices>
       </View>
