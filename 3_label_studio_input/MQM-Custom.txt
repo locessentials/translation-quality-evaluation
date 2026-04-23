@@ -32,16 +32,16 @@
             <Choice value="TERM: Correctness" hotkey="7" />
             <Choice value="TERM: Consistency" hotkey="8" />
             <Choice value="ACC: Translatability" hotkey="9" />
-            <Choice value="ACC: Completeness" hotkey="0" />
             <Choice value="ACC: Cohesion" hotkey="o" />
+            <Choice value="ACC: Completeness" hotkey="0" />
             <Choice value="ACC: Coherence" hotkey="y" />
             <Choice value="ACC: Mistranslation" hotkey="m" />
+            <Choice value="STYLE: Register" hotkey="r" />
+            <Choice value="STYLE: Guidelines" hotkey="g" />
+            <Choice value="STYLE: Text-type" hotkey="t" />
+            <Choice value="STYLE: External reference" hotkey="e" />
             <Choice value="STYLE: Naturalness" hotkey="n" />
             <Choice value="STYLE: Consistency" hotkey="c" />
-            <Choice value="STYLE: Register" hotkey="r" />
-            <Choice value="STYLE: Text-type" hotkey="t" />
-            <Choice value="STYLE: Guidelines" hotkey="g" />
-            <Choice value="STYLE: External reference" hotkey="e" />
             <Choice value="LING: Grammar" hotkey="G" />
             <Choice value="LING: Spelling" hotkey="s" />
             <Choice value="LING: Punctuation" hotkey="p" />
