@@ -171,7 +171,7 @@ Run `python parse_evaluations.py` or `python parse_evaluations.py translation-ev
 
 Run `python split_label_studio_export.py export.json 1,2` to split the full export into one file per source document, only retaining the annotations for specific annotators (you can update 1,2 to the actual annotator IDs), preserving all annotators' work on each document. These JSONs can then be passed on for inter-annotator agreement analysis in step 6.
 
-Run `python ls_to_xlsx.py` to generate an Excel database that combines all comments made by each annotator of a file together. This Excel database is a useful tool for calibration sessions among evaluators.
+Run `python ls_to_xlsx.py export.json` to generate an Excel database that combines all comments made by each annotator of a file together. This Excel database is a useful tool for calibration sessions among evaluators.
 
 ### 5_evaluation_for_distribution
 
