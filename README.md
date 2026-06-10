@@ -132,7 +132,8 @@ translation-evaluations/
 │   ├── data                # Label Studio Output (from 4) where multiple evaluators have evaluated the same doc goes here
 │   ├── reports             # Jupyter notebook exports an .html report of inter-annotator agreement here
 │   │   └── QUALITY REVIEWS_report_2026-03-19.html    # Example inter-annotator agreement report
-│   └── Translation_Annotator_Agreement.ipynb         # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
+│   ├── Translation_Annotator_Agreement.ipynb         # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
+│   └── Translation_Quality_Comparison.ipynb          # Jupyter notebook for analyzing which of two translations of the same source text that evaluators preferred
 ```
 
 ### 1_source_text_md_format
@@ -168,7 +169,7 @@ Put the JSON export of all annotations of the Label Studio project here.
 
 Run `python parse_evaluations.py` or `python parse_evaluations.py translation-evaluation.json` to separate the evaluations performed by one person of different files in one project into unique JSON files that can be loaded onto the Translation Evaluations page from step 5. This script prepares the JSON that is used to give translators feedback on their work. (Note: this script just takes the first annotation per task if multiple exist, which means it silently drops any additional annotators' work.)
 
-Run `python split_label_studio_export.py` to split the full export into one file per source document, preserving all annotators' work on each document. These JSONs can then be passed on for inter-annotator agreement analysis in step 6.
+Run `python split_label_studio_export.py export.json 1,2` to split the full export into one file per source document, only retaining the annotations for specific annotators (you can update 1,2 to the actual annotator IDs), preserving all annotators' work on each document. These JSONs can then be passed on for inter-annotator agreement analysis in step 6.
 
 Run `python ls_to_xlsx.py` to generate an Excel database that combines all comments made by each annotator of a file together. This Excel database is a useful tool for calibration sessions among evaluators.
 
@@ -214,11 +215,19 @@ The page ends with a section on **Interpreting Your Translation Results**, which
 
 ### 6_annotator_agreement
 
+#### Interannotator Agreement
+
 Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studies by running the `Translation_Annotator_Agreement.ipynb`. The Jupyter notebook exports a report with findings related to annotator agreement in html format, like [this one](https://locessentials.github.io/translation-quality-evaluation/6_annotator_agreement/reports/QUALITY%20REVIEWS_report_2026-03-19.html).
 
 Findings related to annotator agreement, such as exact matching, F1 for partial matching, and Cohen's Kappa for category agreement scores, can be used as an aid in helping a group of evaluators to harmonize their ideas and produce consistent work that will not confuse translators.
 
 Note: To run the notebook, copy the 4_label_studio_output file to a `./data` folder in the 6_annotator_agreement folder. Cell 9 starting with `annotation_files` prints the Task #. Update the `doc_id=26` replacing 26 with your task number throughout the file to get document specific analysis (useful if your Label Studio project had multiple annotated files).
+
+#### Translation Quality Comparison
+
+Where multiple evaluators have evaluated a translation, their evaluations can be compared to make determinations about which is the preferred translation by running `Translation_Quality_Comparison.ipynb`. The Jupyter notebook exports a report with findings related to correspondence and readability scores, number of annotations per file, and exact matching and partial matching.
+
+Again, place the data you would like to run in the `./data` file and your report will export to `./reports`
 
 ## References
 
