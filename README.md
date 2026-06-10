@@ -134,6 +134,8 @@ translation-evaluations/
 │   │   └── QUALITY REVIEWS_report_2026-03-19.html    # Example inter-annotator agreement report
 │   ├── Translation_Annotator_Agreement.ipynb         # Jupyter notebook for analyzing inter-rater reliability of evaluations of a single doc by multiple annotators
 │   └── Translation_Quality_Comparison.ipynb          # Jupyter notebook for analyzing which of two translations of the same source text that evaluators preferred
+└── 7_agreement_progress
+    └── Translation_Annotator_Progress.ipynb          # Jupyter notebook for analyzing a group of evaluators progress with inter-annotator agreement over the course of multiple projects
 ```
 
 ### 1_source_text_md_format
@@ -217,7 +219,7 @@ The page ends with a section on **Interpreting Your Translation Results**, which
 
 #### Interannotator Agreement
 
-Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studies by running the `Translation_Annotator_Agreement.ipynb`. The Jupyter notebook exports a report with findings related to annotator agreement in html format, like [this one](https://locessentials.github.io/translation-quality-evaluation/6_annotator_agreement/reports/QUALITY%20REVIEWS_report_2026-03-19.html).
+Where multiple evaluators have evaluated a translation, the annotator agreement reflected in their work can be calculated and studied by running `Translation_Annotator_Agreement.ipynb`. The Jupyter notebook exports a report with findings related to annotator agreement in html format, like [this one](https://locessentials.github.io/translation-quality-evaluation/6_annotator_agreement/reports/QUALITY%20REVIEWS_report_2026-03-19.html).
 
 Findings related to annotator agreement, such as exact matching, F1 for partial matching, and Cohen's Kappa for category agreement scores, can be used as an aid in helping a group of evaluators to harmonize their ideas and produce consistent work that will not confuse translators.
 
@@ -228,6 +230,10 @@ Note: To run the notebook, copy the 4_label_studio_output file to a `./data` fol
 Where multiple evaluators have evaluated a translation, their evaluations can be compared to make determinations about which is the preferred translation by running `Translation_Quality_Comparison.ipynb`. The Jupyter notebook exports a report with findings related to correspondence and readability scores, number of annotations per file, and exact matching and partial matching.
 
 Again, place the data you would like to run in the `./data` file and your report will export to `./reports`
+
+### 7_agreement_progress
+
+Where multiple evaluators have evaluated multiple translations, their progress can be calculated and studies by running `Translation_Annotator_Progress.ipynb` 
 
 ## References
 
