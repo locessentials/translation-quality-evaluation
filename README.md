@@ -118,7 +118,9 @@ translation-evaluations/
 │   └── MQM-Translation-Errors_Core-Adapted.txt     # Label Studio labeling interface code
 ├── 4_label_studio_ouput
 │   ├── intro-to-quality-reviews-sample-markup.json # Example Label Studio output of a project with multiple evaluators of the same doc
-│   └── parse_evaluations.py        # Script to make Label Studio outpt.json pretty for incorporation into translation-evaluations.html in the next step
+│   ├── ls_to_xlsx.py                               # First of three scripts for preparing JSON data for downstream processes
+│   ├── parse_evaluations.py  
+│   └── split_label_studio_export.py
 ├── 5_evaluation_for_distribution
 │   ├── config.json                 # Where meta-data for .html page are configured
 │   ├── scripts.js                  # Scripts to dynamically display annotations on webpage
@@ -162,7 +164,13 @@ The files in this folder are used in the Label Studio projects that are annotate
 
 ### 4_label_studio_ouput
 
-Export the annotations from a Label Studio project here. Run `python parse_evaluations.py` or `python parse_evaluations.py translation-evaluation.json` to separate the evaluations of multiple files in one project file into unique JSON files. The script will also make the format of the JSON optimal for its display in the translation evaluations webpage discussed in the next step.
+Put the JSON export of all annotations of the Label Studio project here. 
+
+Run `python parse_evaluations.py` or `python parse_evaluations.py translation-evaluation.json` to separate the evaluations performed by one person of different files in one project into unique JSON files that can be loaded onto the Translation Evaluations page from step 5. This script prepares the JSON that is used to give translators feedback on their work. (Note: this script just takes the first annotation per task if multiple exist, which means it silently drops any additional annotators' work.)
+
+Run `python split_label_studio_export.py` to split the full export into one file per source document, preserving all annotators' work on each document. These JSONs can then be passed on for inter-annotator agreement analysis in step 6.
+
+Run `python ls_to_xlsx.py` to generate an Excel database that combines all comments made by each annotator of a file together. This Excel database is a useful tool for calibration sessions among evaluators.
 
 ### 5_evaluation_for_distribution
 
